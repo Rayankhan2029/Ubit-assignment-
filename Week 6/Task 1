@@ -1,0 +1,22 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("students.csv"));
+
+        String header = reader.readLine();
+        System.out.println(header);
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            double gpa = Double.parseDouble(parts[3]);
+
+            if (gpa >= 3.5) {
+                System.out.println(line);
+            }
+        }
+
+        reader.close();
+    }
+}
