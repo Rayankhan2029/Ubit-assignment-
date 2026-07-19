@@ -1,0 +1,28 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("products.csv"));
+
+        String header = reader.readLine();
+
+        double total = 0;
+        int count = 0;
+
+        String line;
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split(",");
+            double price = Double.parseDouble(parts[1]);
+
+            total += price;
+            count++;
+        }
+
+        double average = total / count;
+
+        System.out.println("Average Price: " + average + " PKR");
+        System.out.println("Number of Products: " + count);
+
+        reader.close();
+    }
+}
