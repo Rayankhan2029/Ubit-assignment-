@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] list1 = {1, 3, 5, 7};
+        int[] list2 = {2, 4, 6, 8};
+
+        ArrayList<Integer> merged = new ArrayList<>();
+
+        for (int i = 0; i < list1.length; i++) {
+            merged.add(list1[i]);
+        }
+
+        for (int i = 0; i < list2.length; i++) {
+            merged.add(list2[i]);
+        }
+
+        Collections.sort(merged);
+
+        System.out.println(merged);
+    }
+}
