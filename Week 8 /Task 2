@@ -1,0 +1,45 @@
+import java.util.HashMap;
+
+public class Main {
+
+    static HashMap<String, Integer> inventory = new HashMap<>();
+
+    public static void addStock(String product, int quantity) {
+        if (inventory.containsKey(product)) {
+            inventory.put(product, inventory.get(product) + quantity);
+        } else {
+            inventory.put(product, quantity);
+        }
+    }
+
+    public static void removeStock(String product, int quantity) {
+        if (inventory.containsKey(product)) {
+            inventory.put(product, inventory.get(product) - quantity);
+        }
+    }
+
+    public static void checkStock(String product) {
+        System.out.println(product + ": " + inventory.get(product));
+    }
+
+    public static void displayAll() {
+        for (String product : inventory.keySet()) {
+            System.out.println(product + ": " + inventory.get(product));
+        }
+    }
+
+    public static void main(String[] args) {
+        inventory.put("Apples", 50);
+        inventory.put("Bananas", 30);
+        inventory.put("Oranges", 40);
+
+        System.out.println("Initial:");
+        displayAll();
+
+        addStock("Apples", 20);
+        removeStock("Bananas", 15);
+
+        System.out.println("\nAfter changes:");
+        displayAll();
+    }
+}
