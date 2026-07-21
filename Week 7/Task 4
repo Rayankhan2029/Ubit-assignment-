@@ -1,0 +1,37 @@
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("JSON:");
+        System.out.println("{");
+        System.out.println("  \"order_id\": \"1001\",");
+        System.out.println("  \"customer\": { \"name\": \"Alice Johnson\", \"email\": \"alice@email.com\" },");
+        System.out.println("  \"date\": \"2024-01-15\",");
+        System.out.println("  \"items\": [");
+        System.out.println("    { \"product\": \"Laptop\", \"quantity\": 2, \"price\": 1200 },");
+        System.out.println("    { \"product\": \"Mouse\", \"quantity\": 1, \"price\": 25 }");
+        System.out.println("  ],");
+        System.out.println("  \"shipping_address\": \"123 Main St, New York, NY 10001\",");
+        System.out.println("  \"total_amount\": 2425,");
+        System.out.println("  \"payment_method\": \"Credit Card\",");
+        System.out.println("  \"status\": \"Shipped\"");
+        System.out.println("}");
+
+        System.out.println("\nYAML:");
+        System.out.println("order_id: \"1001\"");
+        System.out.println("customer:");
+        System.out.println("  name: Alice Johnson");
+        System.out.println("  email: alice@email.com");
+        System.out.println("date: 2024-01-15");
+        System.out.println("items:");
+        System.out.println("  - product: Laptop");
+        System.out.println("    quantity: 2");
+        System.out.println("    price: 1200");
+        System.out.println("  - product: Mouse");
+        System.out.println("    quantity: 1");
+        System.out.println("    price: 25");
+        System.out.println("shipping_address: 123 Main St, New York, NY 10001");
+        System.out.println("total_amount: 2425");
+        System.out.println("payment_method: Credit Card");
+        System.out.println("status: Shipped");
+    }
+}
